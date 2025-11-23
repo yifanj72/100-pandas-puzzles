@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Select 'animal' and 'age' columns
-
+print(df[['animal', 'age']])

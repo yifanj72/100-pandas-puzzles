@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Select rows where age is NaN
-
+df[df['age'].isna()]

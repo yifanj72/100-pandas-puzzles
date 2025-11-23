@@ -22,4 +22,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Select rows ['d', 'e', 'i'] and columns ['animal', 'age']
-
+print(df.loc[['d', 'e', 'i'], ['animal', 'age']]) -- loc is used to select rows and columns by label

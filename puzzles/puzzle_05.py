@@ -29,4 +29,32 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Display summary information
-
+print(df.info())
+print(df.describe())
+print(df.head())
+print(df.tail())
+print(df.sample(5))
+print(df.count())
+print(df.mean())
+print(df.median())
+print(df.mode())
+print(df.std())
+print(df.var())
+print(df.min())
+print(df.max())
+print(df.sum()) # sum of each column
+print(df.prod()) # product of each column
+print(df.cumsum()) # cumulative sum of each column
+print(df.cumprod()) # cumulative product of each column
+print(df.cummax()) # cumulative maximum of each column
+print(df.cummin()) # cumulative minimum of each column
+print(df.corr()) # correlation matrix
+print(df.cov()) # covariance matrix
+print(df.skew()) # skewness of each column
+print(df.kurt()) # kurtosis of each column
+print(df.isnull()) # check if there are any missing values
+print(df.notnull()) # check if there are no missing values
+print(df.fillna(0)) # fill missing values with 0
+print(df.dropna()) # drop rows with missing values
+print(df.dropna(axis=1)) # drop columns with missing values
+print(df.dropna(how='all')) # drop rows where all values are missing

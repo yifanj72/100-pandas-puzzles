@@ -21,4 +21,5 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Filter rows where visits > 3
+print(df[df['visits'] > 3])
 

@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Return the first 3 rows
-
+print(df.head(3))

@@ -22,3 +22,17 @@ df = pd.DataFrame(data, index=labels)
 # Your solution here
 # TODO: Change 'snake' to 'python' in the 'animal' column
 
+# Solution 1: Using replace() method (most common)
+df['animal'] = df['animal'].replace('snake', 'python')
+print(df)
+
+# Alternative solutions:
+# Solution 2: Using loc with boolean indexing
+# df.loc[df['animal'] == 'snake', 'animal'] = 'python'
+
+# Solution 3: Using map() method
+# df['animal'] = df['animal'].map({'snake': 'python'}).fillna(df['animal'])
+
+# Solution 4: Using apply() with lambda
+# df['animal'] = df['animal'].apply(lambda x: 'python' if x == 'snake' else x)
+

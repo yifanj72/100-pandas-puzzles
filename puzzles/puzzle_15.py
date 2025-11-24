@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Calculate mean age for each animal type
-
+print(df.groupby('animal')['age'].mean())

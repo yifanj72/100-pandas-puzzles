@@ -22,5 +22,7 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Append row 'k' with your choice of values
+df.loc['k'] = ['bird', 1.0, 1, 'yes']
 # TODO: Delete row 'k' to return original DataFrame
-
+df = df.drop('k')
+print(df)

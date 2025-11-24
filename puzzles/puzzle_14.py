@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Calculate the sum of all visits
-
+print(df['visits'].sum())

@@ -21,4 +21,5 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Select rows where age is between 2 and 4 (inclusive)
+print(df[(df['age'] >= 2) & (df['age'] <= 4)])
 

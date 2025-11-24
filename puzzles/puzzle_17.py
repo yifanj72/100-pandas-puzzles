@@ -21,4 +21,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Count the number of each animal type
-
+print(df['animal'].value_counts())

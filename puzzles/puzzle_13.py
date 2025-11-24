@@ -21,4 +21,9 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Change age in row 'f' to 1.5
+df.loc['f', 'age'] = 1.5
+print(df)
+# Alternative solution:
+df.iloc[5, 1] = 1.5
+print(df)
 

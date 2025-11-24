@@ -21,4 +21,5 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Select rows where animal is 'cat' AND age < 3
+print(df[(df['animal'] == 'cat') & (df['age'] < 3)])
 

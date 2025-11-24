@@ -23,4 +23,13 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Replace 'yes'/'no' with True/False
+df['priority'] = df['priority'].map({"yes": True, "no": False})
+print(df)
+
+# Alternative solutions:
+# Solution 2: Using replace() method
+# df['priority'] = df['priority'].replace({'yes': True, 'no': False})
+
+# Solution 3: Using apply() with lambda
+# df['priority'] = df['priority'].apply(lambda x: True if x == 'yes' else False)
 

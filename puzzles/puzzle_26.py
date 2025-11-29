@@ -1,8 +1,8 @@
 """
-Puzzle 24: Conditional Row Selection
+Puzzle 26: Create New Column Condition
 
 Task:
-Select rows where 'age' is between 2 and 5 (inclusive).
+Add a new column 'is_old' = True if age > 3 else False.
 """
 
 import pandas as pd
@@ -18,13 +18,15 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(data, index=labels)
 
 # Your solution here
-# TODO: Change 'snake' to 'python' in the 'animal' column
+# TODO: Add a new column 'is_old' = True if age > 3 else False.
 
 # Solution 1
-print(df[(df['age'] >= 2) & (df['age'] <= 5)])
+df['is_old'] = df['age'] > 3
+print(df)
 
 # Solution 2
-# df.query("2 <= age <= 5")
+df['is_old'] = df['age'].apply(lambda x: x > 3)
 
 # Solution 3
-df[df['age'].between(2,5)]
+df['is_old'] = np.where(df['age'] > 3, True, False)
+

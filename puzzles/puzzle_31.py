@@ -1,10 +1,8 @@
 """
-Puzzle 22: Fill NA Values Using Mean
-
-Given the DataFrame `df`:
+Puzzle 29: Locate Extremes
 
 Task:
-Fill missing values in the 'age' column using the column's mean.
+Find the row label (index) of the oldest animal.
 """
 
 import pandas as pd
@@ -20,14 +18,14 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(data, index=labels)
 
 # Your solution here
-# TODO: Fill missing values in the 'age' column using the column's mean.
+# TODO: Find the row label (index) of the oldest animal.
 
 # Solution 1
-df['age'] = df['age'].fillna(df['age'].mean())
-print(df)
+# Solution 1
+print(df['age'].idxmax())
 
 # Solution 2
-# df['age'].fillna(df['age'].mean(), inplace=True)
+df.loc[df['age'].idxmax()]
 
 # Solution 3
-df['age'] = df['age'].replace(np.nan, df['age'].mean())
+df['age'].argmax()   # deprecated

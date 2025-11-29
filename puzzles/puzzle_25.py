@@ -18,7 +18,7 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(data, index=labels)
 
 # Your solution here
-# TODO: Change 'snake' to 'python' in the 'animal' column
+# TODO: Find the average 'age' for each type of animal.
 
 # Solution 1
 print(df.groupby(['animal'])['age'].mean())

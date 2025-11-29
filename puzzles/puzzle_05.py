@@ -42,7 +42,7 @@ print(df.std())
 print(df.var())
 print(df.min())
 print(df.max())
-print(df.sum()) # sum of each column
+print(df.sum()) #  sum of each column
 print(df.prod()) # product of each column
 print(df.cumsum()) # cumulative sum of each column
 print(df.cumprod()) # cumulative product of each column

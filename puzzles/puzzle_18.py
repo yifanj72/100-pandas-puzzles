@@ -23,4 +23,4 @@ df = pd.DataFrame(data, index=labels)
 
 # Your solution here
 # TODO: Sort by age descending, then visits ascending
-
+print(df.sort_values(by=['age', 'visits'], ascending=[False, True]))

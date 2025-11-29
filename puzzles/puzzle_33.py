@@ -1,10 +1,11 @@
 """
-Puzzle 22: Fill NA Values Using Mean
+Puzzle 33: Reorder Columns
 
-Given the DataFrame `df`:
+Given the DataFrame `df` from puzzle 4:
 
 Task:
-Fill missing values in the 'age' column using the column's mean.
+Reorder the columns to the following order:
+['priority', 'animal', 'age', 'visits'].
 """
 
 import pandas as pd
@@ -20,14 +21,16 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(data, index=labels)
 
 # Your solution here
-# TODO: Fill missing values in the 'age' column using the column's mean.
+# TODO: Reorder the columns.
 
 # Solution 1
-df['age'] = df['age'].fillna(df['age'].mean())
+df = df[['priority', 'animal', 'age', 'visits']]
 print(df)
 
+# Alternative:
 # Solution 2
-# df['age'].fillna(df['age'].mean(), inplace=True)
+new_order = ['priority', 'animal', 'age', 'visits']
+df = df.reindex(columns=new_order)
+print(df)
 
-# Solution 3
-df['age'] = df['age'].replace(np.nan, df['age'].mean())
+

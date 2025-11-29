@@ -1,11 +1,10 @@
 """
-Puzzle 8: Select Specific Rows and Columns
+Puzzle 32: Compute Mean Age by Animal and Priority
 
 Given the DataFrame `df` from puzzle 4:
 
 Task:
-Select the data in rows [3, 4, 8] and in columns ['animal', 'age'].
-Note: The row indices are labels, so rows [3, 4, 8] refer to labels 'd', 'e', 'i'.
+Create a pivot table showing the mean 'age' for each combination of 'animal' and 'priority'.
 """
 
 import pandas as pd
@@ -21,5 +20,15 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(data, index=labels)
 
 # Your solution here
-# TODO: Select rows ['d', 'e', 'i'] and columns ['animal', 'age']
-print(df.loc[['d', 'e', 'i'], ['animal', 'age']]) # loc is used to select rows and columns by label
+# TODO: Build pivot table of mean age by animal (rows) and priority (columns).
+
+# Solution 1: using pivot_table
+pivot = df.pivot_table(values='age', index='animal', columns='priority', aggfunc='mean')
+print(pivot)
+
+# Alternative:
+# Solution 2: using groupby + unstack
+res = df.groupby(['animal', 'priority'])['age'].mean().unstack()
+print(res)
+
+

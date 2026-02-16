@@ -27,6 +27,7 @@ df = pd.DataFrame(data, index=labels)
 
 # Solution 1: Using CategoricalDtype
 order = ['snake', 'dog', 'cat']
+# Because sort_values sorts strings alphabetically, without specifying a custom order.
 df['animal'] = pd.Categorical(df['animal'], categories=order, ordered=True)
 df_sorted = df.sort_values('animal')
 print(df_sorted)
